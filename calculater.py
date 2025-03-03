@@ -43,7 +43,12 @@ while running == 1:
       print("\nInvalid Input")
 
   print("\n1. Addition\n2. Subtraction\n3. Division\n4. Multiplication")
-  selection = int(input("Your Selection: "))
+  while True:
+    try:
+      selection = int(input("Your Selection: "))
+      break
+    except ValueError as ve:
+      print("\nInvalid Input")
   check_selection(selection)
 
   print("\nRestart? Type: Yes")
