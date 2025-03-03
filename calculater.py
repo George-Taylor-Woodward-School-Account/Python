@@ -46,7 +46,10 @@ while running == 1:
   while True:
     try:
       selection = int(input("Your Selection: "))
-      break
+      if selection > 0 and selection < 5:
+        break
+      else:
+        print("\nInvalid Input")
     except ValueError as ve:
       print("\nInvalid Input")
   check_selection(selection)
